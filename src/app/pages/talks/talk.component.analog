@@ -1,6 +1,6 @@
 <script lang="ts">
   import { signal, effect, input } from '@angular/core';
-  // import {HlmButtonDirective} from "@spartan-ng/ui-button-helm" with {analog: 'imports'};
+  import {HlmButtonDirective} from "@spartan-ng/ui-button-helm" with {analog: 'imports'};
   import { Talk } from '../../../talk';
 
   const talk = input<Talk>()

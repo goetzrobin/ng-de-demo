@@ -14,13 +14,13 @@ export default defineConfig(({mode}) => ({
   },
   plugins: [
     analog({
-      vite: {
-        experimental: {
-          supportAnalogFormat: true
-        }
+    vite: {
+      experimental: {
+        supportAnalogFormat: true
       }
-    }),
-    viteTsConfigPaths(),
+    }
+  }),
+    viteTsConfigPaths({loose: true}),
   ],
 
   test: {

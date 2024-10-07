@@ -1,8 +1,10 @@
 <script lang="ts">
 import {RouterLink} from "@angular/router" with {analog: 'imports'};
+import NgDe from "./ng-de.component.analog" with {analog: 'imports'};
 </script>
-<template>
-  <nav class="flex border-b pb-4 items-center space-x-4">
+<template class="-mx-4 block pb-10">
+  <nav class="flex border-b bg-background px-4 pb-4 items-center space-x-4">
+    <NgDe class="h-8 w-8"/>
     <a class="underline opacity-70 hover:opacity-80" routerLink="/" routerLinkActive="bg-sky-500">Home</a>
     <a class="underline opacity-70 hover:opacity-80" routerLink="/talks" routerLinkActive="bg-sky-500">Talks</a>
   </nav>

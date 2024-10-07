@@ -1,8 +1,10 @@
 <script lang="ts">
 import Navigation from "../navigation.component.analog" with { analog: 'imports' };
-// import {HlmH1Directive} from "@spartan-ng/ui-typography-helm" with { analog: 'imports' };
+import {HlmH1Directive} from "@spartan-ng/ui-typography-helm" with { analog: 'imports' };
+import NgDe from "../ng-de.component.analog" with {analog: 'imports'};
 </script>
 <template>
   <Navigation/>
-  <h1 hlmH1>Analog at NG-DE</h1>
+  <h1 hlmH1 class="text-center">Analog at NG-DE</h1>
+  <NgDe class="mt-10 h-40 w-40 mx-auto"/>
 </template>

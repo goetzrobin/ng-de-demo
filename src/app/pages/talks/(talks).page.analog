@@ -20,7 +20,7 @@ const talks = computed(() => load()?.talks ?? [])
 
 <template class="block h-full w-full" [class.bg-red-500]="talks().length === 0" lang="md">
 <Navigation/>
-<div class="mt-12 prose lg:prose-xl">
+<div class="prose lg:prose-xl">
 
 # Speakers
 
