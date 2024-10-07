@@ -5,45 +5,65 @@ export interface Talk {
 
 
 export const queryTalksFromDatabase = (): Talk[] => [
-  {speaker: 'Minko Gechev', name: 'Opening Keynote: The State of Angular'},
-  {speaker: 'Fabian Gosebrink', name: 'Angular Signals under the Hood'},
+  {speaker: 'Emma Twersky', name: 'Angular\'s Momentum'},
+  {speaker: 'Christian Liebel', name: 'AI in the browser: Smarter Angular apps with WebGPU and WebNN'},
   {
-    speaker: 'Robin Goetz',
-    name: 'AnalogJS - The Vite powered Angular meta-framework',
+    speaker: 'Alisa Duncan',
+    name: 'Step Up Your Authentication Security',
+  },
+  {
+    speaker: 'Younes Jaaidi',
+    name: 'Fake it till you Mock it',
   },
   {
     speaker: 'Manfred Steyer',
-    name: 'Modern Angular Architectures with Nx and Lightweight Stores',
+    name: 'Modern Angular Architectures with Lightweight Stores: New Rules and Options',
   },
   {
-    speaker: 'Chau Tran',
-    name: 'Nx: Your Blissful Path to OSS Angular Library Management',
+    speaker: 'Eliran Eliassy',
+    name: 'DIY: Let\'s build a signal from scratch!',
   },
   {
-    speaker: 'Santosh Yadav',
-    name: 'Planning Migration to Strict Mode for Your Angular Apps',
+    speaker: 'Cathrin Möller',
+    name: 'The hidden challenges of run-time integrated microfrontends',
   },
-  {
-    speaker: 'Igor Ćirić',
-    name: 'Breaking Boundaries: Unleashing the Potential of Micro Frontends with Angular and iframes',
-  },
-  {speaker: 'Alex Okrushko', name: 'Custom Features of NgRx SignalStore'},
-  {speaker: 'Rainer Hahnekamp', name: 'Testing in 2024'},
+  {speaker: 'Enea Jahollari', name: 'Going deep into Signals Change Detection'},
+  {speaker: 'Vitalii Bobrov', name: 'Make your app loud: Web Audio in UI'},
   {speaker: 'Soumaya Erradi', name: 'Solving Web3 Issues with Angular'},
   {
-    speaker: 'Nenad Drobac',
-    name: 'SEO for Two Websites on One Platform? Don’t Get Duped!',
+    speaker: 'Matthieu Riegler',
+    name: 'Partial Hydration, the art of sending the bare minimum over the wire\n',
   },
   {
-    speaker: 'Michael Hladky',
-    name: 'Angular Performance and Core Web Vitals in 2024',
+    speaker: 'Robin Goetz',
+    name: 'AnalogJs: The Vite powered Angular meta-framework',
   },
   {
-    speaker: 'Michael Egger-Zikes',
-    name: 'Mastering Angular’s Dependency Injection: Practical Insights to Level Up',
+    speaker: 'Jan-Niklas Wortmann',
+    name: 'The Angular Language Server Inside Out',
   },
   {
-    speaker: 'Mike Ryan',
-    name: 'Closing Keynote: Divining the Future of Angular State Management',
+    speaker: 'Ankita Sood',
+    name: 'From Buttons to Breakpoints: A Deep Dive into Angular Material\'s Latest',
+  },
+  {
+    speaker: 'Benjamin Legrand',
+    name: 'Horror stories from running angular universal in production.',
+  },
+  {
+    speaker: 'Devlin Duldulao',
+    name: 'TanStack Angular Query: Building Efficient, Scalable Angular Applications',
+  },
+  {
+    speaker: 'Stephen Cooper',
+    name: 'Perfecting your Profiling Skills',
+  },
+  {
+    speaker: 'Julian Jandl',
+    name: 'Cut My Task Into Pieces - This is Concurrent Mode',
+  },
+  {
+    speaker: 'Gregor Woiwode',
+    name: 'Pride and Prejudice - Template Driven Forms',
   },
 ];
