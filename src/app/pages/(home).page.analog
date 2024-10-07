@@ -1,3 +1,8 @@
+<script lang="ts">
+import Navigation from "../navigation.component.analog" with { analog: 'imports' };
+// import {HlmH1Directive} from "@spartan-ng/ui-typography-helm" with { analog: 'imports' };
+</script>
 <template>
-<h2>Analog at NG-DE</h2>
+  <Navigation/>
+  <h1 hlmH1>Analog at NG-DE</h1>
 </template>

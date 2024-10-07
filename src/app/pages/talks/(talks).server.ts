@@ -1,3 +1,6 @@
+import {queryTalksFromDatabase} from '../../../talk';
+
 export const load = async () => {
-  return {hello: 'world'}
-}
+  console.log('loading talks.server');
+  return { talks: queryTalksFromDatabase() };
+};

@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply h-full w-full block;
+}
 :root {
 --font-sans: ''
 }

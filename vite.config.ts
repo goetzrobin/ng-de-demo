@@ -1,23 +1,28 @@
 /// <reference types="vitest" />
 
-import { defineConfig } from 'vite';
+import {defineConfig} from 'vite';
 import analog from '@analogjs/platform';
+import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({mode}) => ({
   build: {
     target: ['es2020'],
   },
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog({
-    vite: {
-      experimental: {
-        supportAnalogFormat: true
+  plugins: [
+    analog({
+      vite: {
+        experimental: {
+          supportAnalogFormat: true
+        }
       }
-    }
-  })],
+    }),
+    viteTsConfigPaths(),
+  ],
+
   test: {
     globals: true,
     environment: 'jsdom',

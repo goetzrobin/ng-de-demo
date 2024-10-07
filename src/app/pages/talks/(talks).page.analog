@@ -1,0 +1,38 @@
+<script lang="ts">
+import {computed, input, inject} from '@angular/core';
+import {LoadResult, RouteMeta} from '@analogjs/router';
+import Talk from './talk.component.analog' with {analog: 'imports'};
+import Navigation from "../../navigation.component.analog" with { analog: 'imports' };
+
+import {load} from './(talks).server'
+import {toSignal} from '@angular/core/rxjs-interop';
+import {HttpClient} from '@angular/common/http';
+import {delay, map} from 'rxjs';
+
+export const routeMeta: RouteMeta = {
+  title: 'Talks at NG-DE',
+};
+
+// const talks = toSignal(inject(HttpClient).get('/api/v1/talks').pipe(map(({talks}) => talks), delay(3000)), {initialValue: []})
+const load = input<LoadResult<typeof load>>();
+const talks = computed(() => load()?.talks ?? [])
+</script>
+
+<template class="block h-full w-full" [class.bg-red-500]="talks().length === 0" lang="md">
+<Navigation/>
+<div class="mt-12 prose lg:prose-xl">
+
+# Speakers
+
+## Your speakers at NG-DE
+
+Don't miss Nuxt-level talks by the following speakers. They are awesome!
+
+</div>
+
+<div class="mt-12 space-y-10">
+@for (talk of talks(); track talk.name) {
+  <Talk [talk]="talk"/>
+}
+</div>
+</template>

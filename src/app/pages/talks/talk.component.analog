@@ -1,0 +1,22 @@
+<script lang="ts">
+  import { signal, effect, input } from '@angular/core';
+  // import {HlmButtonDirective} from "@spartan-ng/ui-button-helm" with {analog: 'imports'};
+  import { Talk } from '../../../talk';
+
+  const talk = input<Talk>()
+  const likes = signal(0);
+  effect(() => {
+    console.log('the like count is: ', likes());
+  })
+  const increment = () => likes.update(c => c + 1);
+
+</script>
+
+<template class="block border rounded p-4">
+  <h2 class='text-2xl font-medium'>{{talk()?.name}}</h2>
+  <p class='text-lg text-muted-foreground'>{{talk()?.speaker}}</p>
+  <div class='pt-10 flex justify-between items-center'>
+    <span class="w-40 tabular-nums">{{ likes() }} like@if(likes() !== 1){s}</span>
+    <button hlmBtn (click)='increment()'>Give a like!</button>
+  </div>
+</template>
